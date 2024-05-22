@@ -4,11 +4,23 @@ $intense-black: #1a1819;
 $intense-white: #f8f9fa;
 $black-purple: #0f0616;
 $italian-black: #1b1c1b;
+$background-image1: url("src/assets/images/sclass.jpg");
+$background-image2: url("src/assets/images/audi.jpg");
+$background-image3: url("src/assets/images/clients.jpg");
+$background-overlay: rgba(0, 0, 0, 0.9);
+
 @font-face {
-  font-family: "LimoLux";
+  font-family: "Merriweather";
   src: url(../font/Merriweather/Merriweather-Regular.ttf);
 }
-
+@font-face {
+  font-family: "PinyonScript";
+  src: url(../font/Pinyon_Script/PinyonScript-Regular.ttf);
+}
+@font-face {
+  font-family: "Tangerine";
+  src: url(../font/Tangerine/Tangerine-Regular.ttf);
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,14 +31,19 @@ $italian-black: #1b1c1b;
   color: $intense-white;
 }
 body {
-  font-family: "LimoLux";
+  font-family: "Merriweather";
 }
 .container {
   max-width: 1280px;
   margin: 0 auto;
 }
 .header {
+  position: sticky;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
   margin: 0 auto;
+  z-index: 1000;
   height: 20%;
   justify-content: space-between;
   align-items: center;
@@ -119,5 +136,245 @@ body {
 }
 .footer-copyright {
   text-align: center;
-  margin: 2rem 0;
+  margin: 2rem auto;
+}
+.image-container-first {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: $background-image1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+}
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 15rem;
+  z-index: 3;
+  font-size: 1.2rem;
+
+  h1 {
+    color: $intense-white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.911);
+    position: relative;
+    font-family: PinyonScript;
+    font-weight: bold;
+    font-size: 6rem;
+    animation: fadaeInFromLeft 3s ease forwards;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -5px;
+      width: 100%;
+      height: 2px;
+      background-color: $primary-gold;
+      bottom: -5px;
+      transform: translateX(-50%);
+    }
+  }
+  p {
+    color: $intense-white;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.911);
+    margin: 1rem 0;
+    font-size: 2rem;
+    animation: fadeInFromRight 4s ease forwards;
+  }
+  .btn {
+    font-family: Merriweather;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0.3rem;
+    font-size: 1rem;
+    width: 9rem;
+    color: $primary-gold;
+    border: 1px solid $primary-gold;
+    background-color: $black-purple;
+    transition: color 0.3s;
+    &:hover {
+      color: $intense-white;
+    }
+  }
+}
+.image-container-second {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: $background-image2;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+  }
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 40%;
+    top: 15rem;
+    z-index: 3;
+
+    h1 {
+      color: $intense-white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.911);
+      position: relative;
+      font-family: PinyonScript;
+      font-weight: bold;
+      font-size: 5rem;
+      animation: fadaeInFromLeft 3s ease forwards;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -5px;
+        width: 100%;
+        height: 2px;
+        background-color: $primary-gold;
+        bottom: -5px;
+        transform: translateX(-50%);
+      }
+    }
+    p {
+      color: $intense-white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.98);
+      margin: 1rem 0;
+      font-size: 1.1rem;
+      animation: fadeInFromRight 4s ease forwards;
+      text-transform: none;
+      font-weight: 500;
+    }
+    .btn {
+      font-family: Merriweather;
+      text-transform: uppercase;
+      font-weight: 500;
+      padding: 0.3rem;
+      font-size: 1rem;
+      width: 10rem;
+      color: $primary-gold;
+      border: 1px solid $primary-gold;
+      background-color: $black-purple;
+      transition: color 0.3s;
+      &:hover {
+        color: $intense-white;
+      }
+    }
+  }
+}
+.image-container-third {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-image: $background-image3;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .content-wrapper {
+    text-align: center;
+    z-index: 3;
+    top: 5rem;
+
+    h1 {
+      color: $intense-white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.911);
+      font-family: PinyonScript;
+      font-weight: bold;
+      font-size: 5rem;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 40rem;
+        background-color: $primary-gold;
+      }
+    }
+
+    .clients-wrapper {
+      margin: 7rem 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10rem;
+      .client {
+        border: 3px solid $primary-gold;
+        box-shadow: 0px 0px 8px 0px rgba(247, 239, 239, 0.75);
+        width: 15rem;
+        img {
+          width: 100%;
+          height: 10rem;
+        }
+        p {
+          color: $primary-gold;
+          font-size: 1rem;
+          font-family: "Courier New", Courier, monospace;
+          font-weight: bold;
+        }
+        .comment {
+          color: $intense-white;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadaeInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

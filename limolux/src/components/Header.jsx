@@ -17,7 +17,7 @@ export default function Header() {
       </div>
       <div className="bottom-bar">
         <nav className="nav">
-          <NavLink to="/">Početna</NavLink>
+          <Link to="/">Početna</Link>
           <NavLink to="registracija">Registracija</NavLink>
           <NavLink to="login">Login</NavLink>
           <NavLink to="vozila">Vozila</NavLink>
