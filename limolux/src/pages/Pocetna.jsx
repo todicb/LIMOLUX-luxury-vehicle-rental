@@ -24,13 +24,13 @@ export default function Pocetna() {
               U srcu našeg poslovanja leži predanost pružanju izvanrednih usluga
               našim klijentima. Svaki detalj, od elegantne estetike naših vozila
               do pažljivo odabranog osoblja, pažljivo je osmišljen kako bi
-              osigurao da svako putovanje sa LIMOLUX-om bude ispunjeno udobnošću,
-              luksuzom i profesionalizmom. S našim iskusnim timom stručnjaka,
-              svaka rezervacija s LIMOLUX-om postaje bezbrižno iskustvo. Od
-              početka do kraja, naša posvećena ekipa stoji vam na raspolaganju
-              kako bi osigurala da vaše putovanje bude savršeno organizirano i
-              besprijekorno izvedeno.Dobrodošli u svijet LIMOLUX-a, gdje se
-              luksuz susreće s perfekcijom.
+              osigurao da svako putovanje sa LIMOLUX-om bude ispunjeno
+              udobnošću, luksuzom i profesionalizmom. S našim iskusnim timom
+              stručnjaka, svaka rezervacija s LIMOLUX-om postaje bezbrižno
+              iskustvo. Od početka do kraja, naša posvećena ekipa stoji vam na
+              raspolaganju kako bi osigurala da vaše putovanje bude savršeno
+              organizirano i besprijekorno izvedeno.Dobrodošli u svijet
+              LIMOLUX-a, gdje se luksuz susreće s perfekcijom.
             </p>
             <NavLink to="/kontakt">
               <button className="btn">kontaktirajte nas</button>
