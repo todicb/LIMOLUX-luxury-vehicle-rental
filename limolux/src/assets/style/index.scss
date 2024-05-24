@@ -7,6 +7,7 @@ $italian-black: #1b1c1b;
 $background-image1: url("src/assets/images/sclass.jpg");
 $background-image2: url("src/assets/images/audi.jpg");
 $background-image3: url("src/assets/images/clients.jpg");
+$background-registration: url("src/assets/images/new.jpeg");
 $background-overlay: rgba(0, 0, 0, 0.9);
 
 @font-face {
@@ -39,7 +40,7 @@ body {
 }
 .header {
   position: sticky;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
   top: 0;
   left: 0;
   margin: 0 auto;
@@ -228,7 +229,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
   }
   .content-wrapper {
@@ -261,6 +262,8 @@ body {
     }
     p {
       color: $intense-white;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.98);
       margin: 1rem 0;
       font-size: 1.1rem;
@@ -352,6 +355,134 @@ body {
         }
         .comment {
           color: $intense-white;
+        }
+      }
+    }
+  }
+}
+.wrapper-registration {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: $background-registration;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: Merriweather;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+  .regform {
+    z-index: 2;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 30%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    // backdrop-filter: blur(1px);
+    padding: 1rem;
+
+    header {
+      text-align: center;
+      font-family: PinyonScript;
+      font-size: 3.5rem;
+    }
+
+    .first-row {
+      display: flex;
+      justify-content: space-between;
+      .left,
+      .right {
+        flex: 1;
+      }
+      .left {
+        margin-right: 1rem;
+      }
+    }
+    .reg-btn {
+      margin: 1rem 0;
+      width: 10rem;
+      padding: 1rem;
+      font-size: 1rem;
+      font-weight: bold;
+      font-family: Merriweather;
+      border: none;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: $primary-gold;
+      }
+    }
+
+    input {
+      width: 100%;
+      display: block;
+      height: 2.5rem;
+      font-family: serif;
+      font-size: 1.2rem;
+      padding-left: 10px;
+      border: 2px solid $primary-gold;
+      color: white;
+      background: transparent;
+
+      &::placeholder {
+        color: white;
+        font-style: italic;
+      }
+    }
+    select {
+      width: 6rem;
+      height: 2rem;
+      padding-left: 10px;
+      font-size: 0.95rem;
+      color: $intense-white;
+      background: transparent;
+      border: 2px solid $primary-gold;
+      option {
+        color: $intense-white;
+        background-color: $intense-black;
+      }
+    }
+    a {
+      color: gold;
+      text-transform: uppercase;
+    }
+    p {
+      font-family: Merriweather;
+    }
+    .flag-menu {
+      button:focus,
+      button:focus-visible {
+        outline: none;
+      }
+      .ReactFlagsSelect-module_selectBtn__19wW7 {
+        background-color: transparent;
+        border: 2px solid $primary-gold;
+        
+      }
+      .ReactFlagsSelect-module_fullWidthOptions__1XeR6 {
+        color: black;
+      }
+      .ReactFlagsSelect-module_label__27pw9 {
+        color: $intense-white;
+      }
+      .ReactFlagsSelect-module_fullWidthOptions__1XeR6{
+        background-color: $italian-black;
+        li:hover {
+          background-color: $primary-gold;
         }
       }
     }

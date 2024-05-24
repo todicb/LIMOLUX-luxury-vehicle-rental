@@ -1,8 +1,12 @@
+import RegForm from "../components/RegForm";
 
 export default function Registracija(){
   return(
     <main>
-      <h1>Registracija</h1>
+      <div className="wrapper-registration">
+          <RegForm></RegForm>
+      </div>
+      
     </main>
   )
 }

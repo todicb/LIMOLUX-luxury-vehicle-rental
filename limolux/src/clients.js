@@ -12,7 +12,7 @@ const CLIENTS = [
     src: "../src/assets/images/clients/client2.jpg",
     name: "Aleksandar",
     surname: "Ristić",
-    year: "29",
+    year: "30",
     comment: `„Sjajan tim i vozila koja nadmašuju očekivanja.”`,
   },
   {
@@ -20,7 +20,7 @@ const CLIENTS = [
     src: "../src/assets/images/clients/client3.jpg",
     name: "Marija",
     surname: "Nedić",
-    year: "27",
+    year: "29",
     comment: `„Hvala ovoj firmi na savršenoj usluzi!”`,
   },
 ];
