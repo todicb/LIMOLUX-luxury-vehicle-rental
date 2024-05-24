@@ -6,6 +6,6 @@ Ova aplikacija vam omogućava da iznajmite luksuzni automobil, kao i neke dodatn
 <b>Tehnologije:</b></br>
 Za kreiranje korisničkog interfejsa koristim React. Pored React-a, koristim i alat Vite, a za stilizovanje koristim SCSS.</br>
 <b>Korišćene biblioteke:</b></br>
-Font Awesome</br>
+React-flags-select, Font Awesome</br>
 
 
