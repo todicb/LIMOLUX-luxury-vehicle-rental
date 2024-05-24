@@ -8,6 +8,7 @@ import Prijava from "./pages/Prijava";
 import Vozila from "./pages/Vozila";
 import Kontakt from "./pages/Kontakt";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="vozila" element={<Vozila />} />
           <Route path="kontakt" element={<Kontakt />} />
           <Route path="termsandconditions" element={<TermsAndConditions />} />
+          <Route path="privacypolicy" element={<PrivacyPolicy />} />
           {/* <Route path="*" element={<NoPage />} />   */}
         </Route>
       </Routes>
