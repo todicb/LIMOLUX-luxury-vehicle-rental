@@ -24,7 +24,7 @@ export default function Footer() {
           <div className="col-2">
             <Link to="/">Početna</Link>
             <NavLink to="registracija">Registracija</NavLink>
-            <NavLink to="login">Login</NavLink>
+            <NavLink to="prijava">Prijava</NavLink>
             <NavLink to="vozila">Vozila</NavLink>
             <NavLink to="kontakt">Kontakt</NavLink>
           </div>
@@ -34,9 +34,15 @@ export default function Footer() {
           </div>
         </div>
         <div className="social-media">
-        <NavLink to="https://www.facebook.com/"><FontAwesomeIcon icon={faFacebook} /></NavLink>
-         <NavLink to="https://www.instagram.com/"><FontAwesomeIcon icon={faInstagram} /></NavLink>
-         <NavLink to="https://x.com/i/flow/login"><FontAwesomeIcon icon={faTwitter} /></NavLink>
+          <NavLink to="https://www.facebook.com/">
+            <FontAwesomeIcon icon={faFacebook} />
+          </NavLink>
+          <NavLink to="https://www.instagram.com/">
+            <FontAwesomeIcon icon={faInstagram} />
+          </NavLink>
+          <NavLink to="https://x.com/i/flow/login">
+            <FontAwesomeIcon icon={faTwitter} />
+          </NavLink>
         </div>
 
         <div className="footer-copyright">

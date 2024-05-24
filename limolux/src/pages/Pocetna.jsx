@@ -10,7 +10,7 @@ export default function Pocetna() {
           <div className="content-wrapper">
             <h1>Dobrodošli u LimoLux</h1>
             <p>Do željene destinacija uz vrhunski luksuz u vožnji</p>
-            <NavLink to="vozila">
+            <NavLink to="/vozila">
               <button className="btn">Rezervišite odmah</button>
             </NavLink>
           </div>
@@ -32,7 +32,7 @@ export default function Pocetna() {
               besprijekorno izvedeno.Dobrodošli u svijet LimoLuxa, gdje se
               luksuz susreće s perfekcijom.
             </p>
-            <NavLink to="kontakt">
+            <NavLink to="/kontakt">
               <button className="btn">kontaktirajte nas</button>
             </NavLink>
           </div>

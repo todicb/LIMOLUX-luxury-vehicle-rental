@@ -4,6 +4,8 @@ $intense-black: #1a1819;
 $intense-white: #f8f9fa;
 $black-purple: #0f0616;
 $italian-black: #1b1c1b;
+$matte-darkblue: #0b0b60;
+$king-blue: #66aade;
 $background-image1: url("src/assets/images/sclass.jpg");
 $background-image2: url("src/assets/images/audi.jpg");
 $background-image3: url("src/assets/images/clients.jpg");
@@ -378,7 +380,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.3);
     z-index: 1;
   }
   .regform {
@@ -391,8 +393,7 @@ body {
     gap: 0.5rem;
     width: 30%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.7);
-    // backdrop-filter: blur(1px);
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 1rem;
 
     header {
@@ -471,7 +472,6 @@ body {
       .ReactFlagsSelect-module_selectBtn__19wW7 {
         background-color: transparent;
         border: 2px solid $primary-gold;
-        
       }
       .ReactFlagsSelect-module_fullWidthOptions__1XeR6 {
         color: black;
@@ -479,13 +479,63 @@ body {
       .ReactFlagsSelect-module_label__27pw9 {
         color: $intense-white;
       }
-      .ReactFlagsSelect-module_fullWidthOptions__1XeR6{
+      .ReactFlagsSelect-module_fullWidthOptions__1XeR6 {
         background-color: $italian-black;
         li:hover {
           background-color: $primary-gold;
         }
       }
     }
+  }
+}
+
+.logform {
+  z-index: 2;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 30%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  font-family: Merriweather;
+
+  header {
+    text-align: center;
+    font-family: PinyonScript;
+    font-size: 3.5rem;
+  }
+  input {
+    height: 2rem;
+    padding-left: 5px;
+    font-size: 1rem;
+    font-family: sans-serif;
+  }
+  .button-wrapper {
+    text-align: center;
+  }
+  button {
+    width: 30%;
+    margin: 1rem;
+    padding: 0.5rem;
+    font-family: Merriweather;
+    font-size: 1rem;
+    background-color: $matte-darkblue;
+    color: white;
+    border: none;
+    transition: background-color 0.3s, color 0.1s;
+    &:hover {
+      background-color: $intense-white;
+      color: black;
+    }
+  }
+  a {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $king-blue;
   }
 }
 

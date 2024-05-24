@@ -6,6 +6,7 @@ export default function RegForm() {
   const [data, setData] = useState({
     ime: "",
     prezime: "",
+    korisnickoIme: "",
     email: "",
     telefon: "",
     drzava: "RS",
@@ -32,6 +33,12 @@ export default function RegForm() {
             />
           </div>
         </div>
+        <label htmlFor="korisnickoiIme">Korisničko ime</label>
+        <input
+          type="text"
+          name="korisnickoIme"
+          placeholder="Vaše korisničko ime"
+        />
         <label htmlFor="email">Email</label>
         <input type="email" name="email" placeholder="Vaš email" required />
         <label htmlFor="telefon">Broj telefona</label>
@@ -79,7 +86,7 @@ export default function RegForm() {
         </button>
         <p>
           * Imate već kreiran nalog? Prijavite se{" "}
-          <NavLink to="login">ovde</NavLink>
+          <NavLink to="/prijava">ovde</NavLink>
         </p>
       </form>
     </>
