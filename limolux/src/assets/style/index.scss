@@ -6,11 +6,13 @@ $black-purple: #0f0616;
 $italian-black: #1b1c1b;
 $matte-darkblue: #0b0b60;
 $king-blue: #66aade;
-$background-image1: url("src/assets/images/sclass.jpg");
-$background-image2: url("src/assets/images/audi.jpg");
-$background-image3: url("src/assets/images/clients.jpg");
-$background-registration: url("src/assets/images/new.jpeg");
-$background-contact: url("src/assets/images/sclassblack.jpg");
+$white-marble: #e7e9ea;
+$background-image1: url("../src/assets/images/sclass.jpg");
+$background-image2: url("../src/assets/images/audi.jpg");
+$background-image3: url("../src/assets/images/clients.jpg");
+$background-registration: url("../src/assets/images/new.jpeg");
+$background-contact: url("../src/assets/images/sclassblack.jpg");
+
 $background-overlay: rgba(0, 0, 0, 0.9);
 
 @font-face {
@@ -577,6 +579,220 @@ body {
     padding: 2rem;
     text-transform: uppercase;
   }
+}
+.vozila-container {
+  display: flex;
+  gap: 4rem;
+  width: 100%;
+  height: 100%;
+  background-color: $white-marble;
+  .filter-side {
+    border: 3px solid $primary-gold;
+    margin: 2rem;
+    width: 20%;
+    height: 100%;
+    margin: 1rem 0.5rem;
+    background-color: $italian-black;
+    text-align: center;
+    .filter {
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+
+      .filter-checkbox {
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        div {
+          margin: 1rem 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        input {
+          height: 1.5rem;
+          width: 1rem;
+          margin-left: 5rem;
+        }
+      }
+    }
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      margin: 1rem 0;
+      color: $intense-white;
+      font-family: "PinyonScript";
+    }
+    input {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      width: 100%;
+      height: 2rem;
+      font-size: 1rem;
+      &::placeholder {
+        color: black;
+        padding: 0 1px;
+        font-size: 1.2rem;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    button {
+      width: 6rem;
+      height: 2rem;
+      text-transform: uppercase;
+      font-size: 1rem;
+      outline: none;
+      border: none;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      transition: background-color, color 0.2s;
+      &:hover {
+        background-color: $primary-gold;
+        color: $intense-white;
+      }
+    }
+  }
+  section {
+    font-family: Merriweather;
+    margin: 4rem 0;
+    width: 70%;
+    .no-card {
+      color: black;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+    .card-content {
+      font-family: Merriweather;
+      text-align: center;
+      border: 3px solid $primary-gold;
+      width: 100%;
+      background-color: $dark-navy-blue;
+
+      button {
+        font-family: Merriweather;
+        padding: 0.3rem 1.5rem;
+        text-transform: uppercase;
+        margin: 0.5rem 0;
+        border: 2px solid $primary-gold;
+        border-radius: 30px;
+        background-color: transparent;
+        color: $intense-white;
+        transition: background-color 0.1s;
+        outline: none;
+        &:hover {
+          background-color: $primary-gold;
+        }
+      }
+    }
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+  }
+}
+.automobil-wrapper {
+  position: relative;
+  background-image: $background-image2;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  height: 70vh;
+  width: 100%;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+
+  .automobil-card {
+    width: 80%;
+    display: flex;
+    gap: 1rem;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+
+    .automobil-image {
+      width: 60%;
+      border: 2px solid silver;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .automobil-content {
+      
+      img {
+        width: 20rem;
+        height: 5rem;
+      }
+      margin: 1rem;
+      width: 50%;
+      height: 100%;
+      p {
+        color: $intense-white;
+        font-family: "Merriweather";
+        font-size: 1.2rem;
+      }
+      button {
+        width: 7.5rem;
+        height: 2rem;
+        margin: 1rem 0;
+        font-family: "Merriweather";
+        font-size: 1rem;
+        background-color: $king-blue;
+        transition: background-color 0.1s;
+        outline: none;
+        border: none;
+
+        &:hover {
+          background-color: $intense-white;
+        }
+      }
+      span {
+        position: absolute;
+        right: -15px;
+        top: -15px;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        color: black;
+        background-color: $intense-white;
+        padding: 8px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: $primary-gold;
+  font-weight: bold;
 }
 
 @keyframes fadaeInFromLeft {

@@ -16,10 +16,12 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.1",
     "@react-google-maps/api": "^2.19.3",
+    "axios": "^1.7.2",
     "google-map-react": "^2.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-flags-select": "^2.2.3",
+    "react-js-pagination": "^3.0.3",
     "react-router-dom": "^6.23.1",
     "sass": "^1.77.2"
   },

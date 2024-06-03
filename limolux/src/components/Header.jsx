@@ -7,7 +7,7 @@ export default function Header() {
         <div className="top-bar">
           <div className="left-side">
             <Link to="/">
-              <img src="src/assets/images/logo.png" alt="logo.png" />
+              <img src="../src/assets/images/logo.png" alt="logo.png" />
             </Link>
           </div>
           <div className="right-side">
