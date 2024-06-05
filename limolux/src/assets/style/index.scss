@@ -738,7 +738,6 @@ body {
       }
     }
     .automobil-content {
-      
       img {
         width: 20rem;
         height: 5rem;
@@ -785,6 +784,9 @@ body {
     }
   }
 }
+.hideOption {
+  display: none;
+}
 .loader {
   display: flex;
   justify-content: center;
@@ -792,6 +794,18 @@ body {
   font-size: 2rem;
   text-transform: uppercase;
   color: $primary-gold;
+  font-weight: bold;
+}
+.error {
+  color: red;
+  font-family:Merriweather;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.success {
+  color: green;
+  font-family:Merriweather;
+  text-transform: uppercase;
   font-weight: bold;
 }
 
