@@ -738,9 +738,18 @@ body {
       }
     }
     .automobil-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem;
+      width: 50%;
+      height: 100%;
+      gap: 0.5rem;
+
       img {
-        width: 20rem;
-        height: 5rem;
+        width: 17rem;
+        height: 4rem;
       }
       margin: 1rem;
       width: 50%;
@@ -750,9 +759,29 @@ body {
         font-family: "Merriweather";
         font-size: 1.2rem;
       }
-      button {
-        width: 7.5rem;
-        height: 2rem;
+      .datePicker-container {
+        margin-bottom: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        label {
+          font-size: 1.1rem;
+          font-family: Merriweather;
+        }
+        .datePicker-input {
+          width: 80%;
+          padding: 5px;
+          border: 2px solid $king-blue;
+          margin-left: 10px;
+        }
+      }
+      .poruka-cena {
+        text-transform: uppercase;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .rezervisi-button {
+        width: 6.5rem;
+        height: 2.1rem;
         margin: 1rem 0;
         font-family: "Merriweather";
         font-size: 1rem;
@@ -765,7 +794,7 @@ body {
           background-color: $intense-white;
         }
       }
-      span {
+      .close-span {
         position: absolute;
         right: -15px;
         top: -15px;
@@ -784,6 +813,7 @@ body {
     }
   }
 }
+
 .hideOption {
   display: none;
 }
@@ -798,15 +828,24 @@ body {
 }
 .error {
   color: red;
-  font-family:Merriweather;
+  font-family: Merriweather;
   text-transform: uppercase;
   font-weight: bold;
 }
 .success {
   color: green;
-  font-family:Merriweather;
+  font-family: Merriweather;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+.automobil-wrapper .automobil-card .automobil-content button {
+  width: 4.5rem;
+  height: 1.1rem;
+  background-color: $king-blue;
+}
+.automobil-wrapper .automobil-card .automobil-content span {
+  display: none;
 }
 
 @keyframes fadaeInFromLeft {

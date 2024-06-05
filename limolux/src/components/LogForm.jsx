@@ -26,13 +26,12 @@ export default function LogForm() {
       .post("http://localhost:8081/prijava", data)
       .then((result) => {
         console.log(result);
-        if(result.data === "Uspešno") {
-          setInfo("Uspešno ste se prijavili")
+        if (result.data === "Uspešno") {
+          setInfo("Uspešno ste se prijavili");
           setTimeout(() => {
             navigate("/");
           }, 1500);
-          
-        }else {
+        } else {
           setInfo(result.data);
         }
       })
@@ -64,7 +63,15 @@ export default function LogForm() {
         <div className="button-wrapper">
           <button type="submit">Prijavite se</button>
         </div>
-        {info && <p className={info === "Uspešno ste se prijavili" ? "success" : "error"}>{info}</p>}
+        {info && (
+          <p
+            className={
+              info === "Uspešno ste se prijavili" ? "success" : "error"
+            }
+          >
+            {info}
+          </p>
+        )}
 
         <p>
           * Nemate nalog? Registrujte se{" "}
