@@ -7,6 +7,6 @@ Ova aplikacija vam omogućava da iznajmite luksuzni automobil, kao i neke dodatn
 Za kreiranje korisničkog interfejsa koristim React. Pored React-a, koristim i alat Vite, a za stilizovanje koristim SCSS.</br>
 Za serversku stranu koristim Express, MongoDB za bazu podataka. </br>
 <b>Korišćene biblioteke:</b></br>
-Axios, React-flags-select, Font Awesome, React Date Picker</br>
+Axios, Redux Toolkit, React-flags-select, Font Awesome, React Date Picker, React-loader-spinner</br>
 
 
