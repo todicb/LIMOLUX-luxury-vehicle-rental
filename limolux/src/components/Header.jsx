@@ -1,6 +1,17 @@
 import { Link, NavLink } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import authSlice from "../store/features/authSlice";
+import { logout } from "../store/features/authSlice";
 
 export default function Header() {
+  const { isLogged, korisnik } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+
+  const handleLogout = () => {
+    dispatch(logout());
+    localStorage.removeItem("korisnik");
+  };
+
   return (
     <header className="header">
       <div className="container">
@@ -22,6 +33,11 @@ export default function Header() {
             <NavLink to="prijava">Prijava</NavLink>
             <NavLink to="vozila">Vozila</NavLink>
             <NavLink to="kontakt">Kontakt</NavLink>
+            {isLogged && korisnik && (
+              <button className="odjava-btn" onClick={handleLogout}>
+                Odjavite se
+              </button>
+            )}
           </nav>
         </div>
       </div>

@@ -3,15 +3,18 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { useSelector } from "react-redux";
+import { Notifikacija } from "../components/Notifikacija";
+import { Oval } from "react-loader-spinner";
 
 export default function Automobil() {
+  const { isLogged, korisnik } = useSelector((state) => state.auth);
   let { voziloid } = useParams();
   const [vozilo, setVozilo] = useState(null);
   const [loader, setLoader] = useState(true);
   const [datumPreuzimanja, setDatumPreuzimanja] = useState(null);
   const [datumVracanja, setDatumVracanja] = useState(null);
   const [cena, setCena] = useState(null);
-
   const navigate = useNavigate();
 
   const izracunajCenu = (datumPreuzimanja, datumVracanja, cenaPoDanu) => {
@@ -54,11 +57,27 @@ export default function Automobil() {
   }, [datumPreuzimanja, datumVracanja, vozilo]);
 
   if (loader && !vozilo) {
-    return <p className="loader">Učitavanje...</p>;
+    return (
+      <div className="spinner-container">
+        <Oval
+          height={90}
+          width={90}
+          color="silver"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+          ariaLabel="oval-loading"
+          secondaryColor="white"
+          strokeWidth={2}
+          strokeWidthSecondary={2}
+        />
+      </div>
+    );
   }
 
   return (
     <main>
+      {!isLogged && !korisnik && <Notifikacija></Notifikacija>}
       <div className="automobil-wrapper">
         <div className="automobil-card">
           <div className="automobil-image">
@@ -108,9 +127,13 @@ export default function Automobil() {
                 Ukupna cena za odabrani period: {cena.toFixed(2)} &#8364;
               </p>
             )}
-            <button className="rezervisi-button" onClick={rezervacija}>
-              Rezervišite
-            </button>
+
+            {isLogged && (
+              <button className="rezervisi-button" onClick={rezervacija}>
+                Rezervišite
+              </button>
+            )}
+
             <span className="close-span" onClick={() => navigate(-1)}>
               X
             </span>

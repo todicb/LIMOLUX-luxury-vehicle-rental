@@ -57,7 +57,6 @@ export default function RegForm() {
     }));
   };
 
-  console.log(data);
   return (
     <>
       <form onSubmit={handleSubmit} className="regform">

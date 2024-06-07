@@ -717,7 +717,7 @@ body {
   }
 
   .automobil-card {
-    width: 80%;
+    width: 75%;
     display: flex;
     gap: 1rem;
     background-color: black;
@@ -809,6 +809,7 @@ body {
         background-color: $intense-white;
         padding: 8px;
         border-radius: 50%;
+        z-index: 5;
       }
     }
   }
@@ -848,6 +849,51 @@ body {
   display: none;
 }
 
+.prijavljen-korisnik {
+  text-align: center;
+  p {
+    text-transform: uppercase;
+    font-family: Merriweather;
+  }
+}
+
+.odjava-btn {
+  width: 7rem;
+  height: 2rem;
+  background-color: transparent;
+  color: $intense-white;
+  border: 2px solid $intense-white;
+  text-transform: uppercase;
+}
+
+.notifikacija {
+  width: 25%;
+  font-family: Merriweather;
+  font-weight: bold;
+  text-align: center;
+  color: $intense-white;
+  position: absolute;
+  right: -100%;
+  top: 11%;
+  z-index: 3;
+  padding: 1rem;
+  border: 1px solid red;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.8);
+  animation: slideIn 1s forwards;
+  a {
+    color: $primary-gold;
+    text-transform: uppercase;
+  }
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 @keyframes fadaeInFromLeft {
   from {
     opacity: 0;
@@ -866,5 +912,16 @@ body {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    right: -100%;
+    opacity: 0;
+  }
+  100% {
+    right: 5%;
+    opacity: 1;
   }
 }
