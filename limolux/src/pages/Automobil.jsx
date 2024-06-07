@@ -6,6 +6,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { useSelector } from "react-redux";
 import { Notifikacija } from "../components/Notifikacija";
 import { Oval } from "react-loader-spinner";
+import { Poruka } from "../components/Poruka";
 
 export default function Automobil() {
   const { isLogged, korisnik } = useSelector((state) => state.auth);
@@ -15,6 +16,7 @@ export default function Automobil() {
   const [datumPreuzimanja, setDatumPreuzimanja] = useState(null);
   const [datumVracanja, setDatumVracanja] = useState(null);
   const [cena, setCena] = useState(null);
+  const [poruka, setPoruka] = useState(false);
   const navigate = useNavigate();
 
   const izracunajCenu = (datumPreuzimanja, datumVracanja, cenaPoDanu) => {
@@ -26,14 +28,26 @@ export default function Automobil() {
     }
   };
 
-  const rezervacija = () => {
+  const rezervacija = async () => {
     if (datumPreuzimanja && datumVracanja) {
       const rezervacijaPodaci = {
-        voziloid: vozilo.id,
-        datumPreuzimanja,
-        datumVracanja,
+        voziloId: vozilo.id,
+        datumPreuzimanja: datumPreuzimanja.toISOString(),
+        datumVracanja: datumVracanja.toISOString(),
+        korisnickoIme: korisnik.korisnickoIme,
+        cena,
       };
+      setPoruka(true);
       console.log(rezervacijaPodaci);
+      try {
+        const response = await axios.post(
+          "http://localhost:8081/rezervacija",
+          rezervacijaPodaci
+        );
+        console.log(response.data);
+      } catch (error) {
+        console.error(error);
+      }
     }
   };
 
@@ -129,9 +143,12 @@ export default function Automobil() {
             )}
 
             {isLogged && (
-              <button className="rezervisi-button" onClick={rezervacija}>
-                Rezervišite
-              </button>
+              <>
+                <button className="rezervisi-button" onClick={rezervacija}>
+                  Rezervišite
+                </button>
+                {poruka && <Poruka />}
+              </>
             )}
 
             <span className="close-span" onClick={() => navigate(-1)}>

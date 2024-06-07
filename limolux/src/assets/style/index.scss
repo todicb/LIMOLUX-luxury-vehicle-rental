@@ -789,6 +789,7 @@ body {
         transition: background-color 0.1s;
         outline: none;
         border: none;
+        cursor: pointer;
 
         &:hover {
           background-color: $intense-white;
@@ -892,6 +893,22 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+.poruka {
+  width: 40%;
+  font-family: Merriweather;
+  font-weight: bold;
+  text-align: center;
+  color: $intense-white;
+  position: absolute;
+  right: -100%;
+  top: -20%;
+  z-index: 3;
+  padding: 1rem;
+  border: 1px solid red;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);
+  animation: slideIn 1s forwards;
 }
 
 @keyframes fadaeInFromLeft {

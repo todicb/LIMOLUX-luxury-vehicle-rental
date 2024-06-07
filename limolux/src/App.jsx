@@ -12,6 +12,7 @@ import TermsAndConditions from "./pages/TermsAndConditions";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Automobil from "./pages/Automobil";
 
+
 function App() {
   return (
     <BrowserRouter>

@@ -1,8 +1,10 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import ReactFlagsSelect from "react-flags-select";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { Navigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 
 export default function RegForm() {
   const initialData = {
@@ -19,6 +21,14 @@ export default function RegForm() {
   const [info, setInfo] = useState("");
   const [infoType, setInfoType] = useState("");
   const navigate = useNavigate();
+  const { isLogged } = useSelector((state) => state.auth);
+
+ useEffect(() => {
+    const postojeciKorisnik = localStorage.getItem("korisnik");
+    if (postojeciKorisnik) {
+      navigate('/'); 
+    }
+  }, [navigate]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

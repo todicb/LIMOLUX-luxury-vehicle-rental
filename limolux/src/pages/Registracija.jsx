@@ -1,12 +1,11 @@
 import RegForm from "../components/RegForm";
 
-export default function Registracija(){
-  return(
+export default function Registracija() {
+  return (
     <main>
       <div className="wrapper-registration">
-          <RegForm></RegForm>
+        <RegForm></RegForm>
       </div>
-      
     </main>
-  )
+  );
 }

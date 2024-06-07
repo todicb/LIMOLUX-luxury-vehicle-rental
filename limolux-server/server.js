@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const RegistrovaniKorisniciModel = require("./models/RegistrovaniKorisnici");
 const bcrypt = require("bcrypt");
+const Rezervacija = require("./models/Rezervacija");
 
 const app = express();
 app.use(express.json());
@@ -21,6 +22,28 @@ mongoose
   .catch((error) =>
     console.error("Nije se moguće povezati sa bazom podataka.", error)
   );
+
+app.post("/rezervacija", async (req, res) => {
+  try {
+    const { voziloId, datumPreuzimanja, datumVracanja, korisnickoIme, cena } =
+      req.body;
+
+    const novaRezervacija = new Rezervacija({
+      voziloId,
+      datumPreuzimanja,
+      datumVracanja,
+      korisnickoIme,
+      cena,
+    });
+
+    await novaRezervacija.save();
+
+    res.json({ success: true, message: "Rezervacija uspešno sačuvana!" });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: error.message });
+  }
+});
 
 app.post("/prijava", async (req, res) => {
   try {

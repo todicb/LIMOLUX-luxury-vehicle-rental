@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Card from "../components/Card";
-import { Oval } from 'react-loader-spinner'
+import { Oval } from "react-loader-spinner";
 
 export default function Vozila() {
   const [data, setData] = useState([]);
@@ -14,6 +14,7 @@ export default function Vozila() {
   });
   const [loader, setLoader] = useState(true);
 
+  
   useEffect(() => {
     setLoader(true);
     axios
@@ -135,22 +136,22 @@ export default function Vozila() {
           </div>
         </div>
         <section>
-          { loader ?  ( 
-             <div className="spinner-container">
-             <Oval
-               height={80}
-               width={100}
-               color="silver"
-               wrapperStyle={{}}
-               wrapperClass=""
-               visible={true}
-               ariaLabel='oval-loading'
-               secondaryColor="black"
-               strokeWidth={2}
-               strokeWidthSecondary={2}
-             />
-           </div>
-           ) : filteredData.length === 0 ? (
+          {loader ? (
+            <div className="spinner-container">
+              <Oval
+                height={80}
+                width={100}
+                color="silver"
+                wrapperStyle={{}}
+                wrapperClass=""
+                visible={true}
+                ariaLabel="oval-loading"
+                secondaryColor="black"
+                strokeWidth={2}
+                strokeWidthSecondary={2}
+              />
+            </div>
+          ) : filteredData.length === 0 ? (
             <p className="no-card">Trentuno nemamo tu marku vozila.</p>
           ) : (
             <div className="card-container">
