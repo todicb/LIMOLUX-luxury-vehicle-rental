@@ -14,12 +14,11 @@ export default function Vozila() {
   });
   const [loader, setLoader] = useState(true);
 
-  
   useEffect(() => {
-    setLoader(true);
     axios
       .get("https://mocki.io/v1/06bde23e-0c06-4bc1-8a9c-ebc4dba4ecea")
       .then((response) => {
+        setLoader(true);
         setData(response.data.vozila);
         setLoader(false);
       })

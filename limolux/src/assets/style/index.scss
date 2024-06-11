@@ -670,7 +670,7 @@ body {
       text-align: center;
       border: 3px solid $primary-gold;
       width: 100%;
-      background-color: $dark-navy-blue;
+      background-color: $intense-black;
 
       button {
         font-family: Merriweather;
@@ -868,23 +868,27 @@ body {
 }
 
 .notifikacija {
-  width: 25%;
+  width: 45%;
   font-family: Merriweather;
   font-weight: bold;
   text-align: center;
   color: $intense-white;
   position: absolute;
   right: -100%;
-  top: 11%;
+  top: 13%;
   z-index: 3;
   padding: 1rem;
   border: 1px solid red;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.95);
   background-color: rgba(0, 0, 0, 0.8);
   animation: slideIn 1s forwards;
+  text-transform: uppercase;
   a {
     color: $primary-gold;
     text-transform: uppercase;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -895,20 +899,21 @@ body {
   height: 100vh;
 }
 .poruka {
-  width: 40%;
+  width: 80%;
   font-family: Merriweather;
   font-weight: bold;
   text-align: center;
-  color: $intense-white;
+  color: #f8f9fa;
   position: absolute;
   right: -100%;
-  top: -20%;
+  top: -15%;
   z-index: 3;
   padding: 1rem;
   border: 1px solid red;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.95);
   animation: slideIn 1s forwards;
+  text-transform: uppercase;
 }
 
 @keyframes fadaeInFromLeft {
