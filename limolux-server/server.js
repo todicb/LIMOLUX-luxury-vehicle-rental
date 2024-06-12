@@ -25,7 +25,7 @@ mongoose
 
 app.post("/rezervacija", async (req, res) => {
   try {
-    const { voziloId, datumPreuzimanja, datumVracanja, korisnickoIme, cena } =
+    const { voziloId, datumPreuzimanja, datumVracanja, korisnickoIme, cena, voziloMarka, voziloModel, voziloGodiste, voziloTip, voziloGorivo } =
       req.body;
 
     const novaRezervacija = new Rezervacija({
@@ -34,6 +34,11 @@ app.post("/rezervacija", async (req, res) => {
       datumVracanja,
       korisnickoIme,
       cena,
+      voziloMarka,
+      voziloModel,
+      voziloGodiste,
+      voziloTip,
+      voziloGorivo,
     });
 
     await novaRezervacija.save();

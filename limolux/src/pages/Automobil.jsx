@@ -36,6 +36,11 @@ export default function Automobil() {
         datumVracanja: datumVracanja.toISOString(),
         korisnickoIme: korisnik.korisnickoIme,
         cena,
+        voziloMarka: vozilo.marka,
+        voziloModel: vozilo.model,
+        voziloGodiste: vozilo.godiste,
+        voziloTip: vozilo.tip,
+        voziloGorivo: vozilo.gorivo
       };
       setPoruka(true);
       console.log(rezervacijaPodaci);

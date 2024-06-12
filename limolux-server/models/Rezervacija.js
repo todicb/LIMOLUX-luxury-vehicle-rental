@@ -21,6 +21,26 @@ const rezervacijaShema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  voziloMarka: {
+    type: String,
+    required: true,
+  },
+  voziloModel: {
+    type: String,
+    required: true,
+  },
+  voziloGodiste: {
+    type: Number,
+    required: true,
+  },
+  voziloTip: {
+    type: String,
+    required: true,
+  },
+  voziloGorivo: {
+    type: String,
+    required: true,
+  },
 });
 
 const Rezervacija = mongoose.model("Rezervacija", rezervacijaShema);

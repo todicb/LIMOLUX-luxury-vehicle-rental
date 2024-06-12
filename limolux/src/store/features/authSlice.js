@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+
 const initialState = {
   isLogged: false,
   korisnik: null,
@@ -15,7 +16,7 @@ const authSlice = createSlice({
     },
     logout(state, action) {
       state.isLogged = false;
-      state.korisnik = null;
+      state.korisnik = action.payload;
     },
   },
 });
