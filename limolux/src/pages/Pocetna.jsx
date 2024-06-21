@@ -9,7 +9,7 @@ export default function Pocetna() {
         <div className="container">
           <div className="content-wrapper">
             <h1>Dobrodošli u LimoLux</h1>
-            <p>Do željene destinacija uz vrhunski luksuz u vožnji</p>
+            <p>Do željene destinacije uz vrhunski luksuz u vožnji</p>
             <NavLink to="/vozila">
               <button className="btn">Rezervišite odmah</button>
             </NavLink>

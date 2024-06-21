@@ -2,6 +2,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import Card from "../components/Card";
 import { Oval } from "react-loader-spinner";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 export default function Vozila() {
   const [data, setData] = useState([]);
@@ -13,10 +15,11 @@ export default function Vozila() {
     suv: false,
   });
   const [loader, setLoader] = useState(true);
+  const [mobileFilter, setMobileFilter] = useState(false);
 
   useEffect(() => {
     axios
-      .get("https://mocki.io/v1/06bde23e-0c06-4bc1-8a9c-ebc4dba4ecea")
+      .get("https://mocki.io/v1/239bfaa0-8df6-4e6d-9b6e-7112d138b59c")
       .then((response) => {
         setLoader(true);
         setData(response.data.vozila);
@@ -70,10 +73,22 @@ export default function Vozila() {
     return marka && gorivo && tip;
   });
 
+  const prikaziFilter = () => {
+    setMobileFilter(!mobileFilter);
+  };
+
+  if (setMobileFilter) {
+    window.scrollTo(0, 0);
+  }
+
   return (
     <main>
       <div className="vozila-container">
-        <div className="filter-side">
+        <div className="filter-icon" onClick={prikaziFilter}>
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
+        </div>
+
+        <div className={`filter-side ${mobileFilter ? "show" : ""}`}>
           <div className="filter">
             <h1>Filter</h1>
             <input
@@ -134,6 +149,7 @@ export default function Vozila() {
             <button onClick={handleButton}>Reset</button>
           </div>
         </div>
+
         <section>
           {loader ? (
             <div className="spinner-container">

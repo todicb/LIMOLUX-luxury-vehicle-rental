@@ -40,7 +40,7 @@ export default function Automobil() {
         voziloModel: vozilo.model,
         voziloGodiste: vozilo.godiste,
         voziloTip: vozilo.tip,
-        voziloGorivo: vozilo.gorivo
+        voziloGorivo: vozilo.gorivo,
       };
       setPoruka(true);
       console.log(rezervacijaPodaci);
@@ -58,7 +58,7 @@ export default function Automobil() {
 
   useEffect(() => {
     axios
-      .get("https://mocki.io/v1/06bde23e-0c06-4bc1-8a9c-ebc4dba4ecea")
+      .get("https://mocki.io/v1/239bfaa0-8df6-4e6d-9b6e-7112d138b59c")
       .then((response) => {
         const voziloData = response.data.vozila.find(
           (elem) => elem.id === parseInt(voziloid)
@@ -110,49 +110,56 @@ export default function Automobil() {
             <p>Godište: {vozilo.godiste}</p>
 
             <p>Cena po danu: {vozilo.cena} &#8364;</p>
-            <p>Pozovite nas: +381 (0)64 XXX 000</p>
-            <div className="datePicker-container">
-              <label>
-                Od datuma:
-                <DatePicker
-                  selected={datumPreuzimanja}
-                  onChange={(datum) => setDatumPreuzimanja(datum)}
-                  selectsStart
-                  startDate={datumPreuzimanja}
-                  endDate={datumVracanja}
-                  dateFormat="dd/MM/yyyy"
-                  className="datePicker-input"
-                />
-              </label>
-
-              <div className="datePicker-container">
-                <label>
-                  Do datuma:
-                  <DatePicker
-                    selected={datumVracanja}
-                    onChange={(datum) => setDatumVracanja(datum)}
-                    selectsEnd
-                    startDate={datumPreuzimanja}
-                    endDate={datumVracanja}
-                    minDate={datumPreuzimanja}
-                    dateFormat="dd/MM/yyyy"
-                    className="datePicker-input"
-                  />
-                </label>
-              </div>
-            </div>
-            {cena !== null && (
-              <p className="poruka-cena">
-                Ukupna cena za odabrani period: {cena.toFixed(2)} &#8364;
-              </p>
-            )}
-
-            {isLogged && (
+            {vozilo.naStanju === 0 ? (
+              <p>Trenutno nema slobodnih vozila</p>
+            ) : (
               <>
-                <button className="rezervisi-button" onClick={rezervacija}>
-                  Rezervišite
-                </button>
-                {poruka && <Poruka />}
+                {/* <p>Slobodnih vozila: {vozilo.naStanju}</p> */}
+                <p>Pozovite nas: +381 (0)64 XXX 000</p>
+                <div className="datePicker-container">
+                  <label>
+                    Od datuma:
+                    <DatePicker
+                      selected={datumPreuzimanja}
+                      onChange={(datum) => setDatumPreuzimanja(datum)}
+                      selectsStart
+                      startDate={datumPreuzimanja}
+                      endDate={datumVracanja}
+                      dateFormat="dd/MM/yyyy"
+                      className="datePicker-input"
+                    />
+                  </label>
+
+                  <div className="datePicker-container">
+                    <label>
+                      Do datuma:
+                      <DatePicker
+                        selected={datumVracanja}
+                        onChange={(datum) => setDatumVracanja(datum)}
+                        selectsEnd
+                        startDate={datumPreuzimanja}
+                        endDate={datumVracanja}
+                        minDate={datumPreuzimanja}
+                        dateFormat="dd/MM/yyyy"
+                        className="datePicker-input"
+                      />
+                    </label>
+                  </div>
+                </div>
+                {cena !== null && (
+                  <p className="poruka-cena">
+                    Ukupna cena za odabrani period: {cena.toFixed(2)} &#8364;
+                  </p>
+                )}
+
+                {isLogged && (
+                  <>
+                    <button className="rezervisi-button" onClick={rezervacija}>
+                      Rezervišite
+                    </button>
+                    {poruka && <Poruka />}
+                  </>
+                )}
               </>
             )}
 

@@ -1,9 +1,10 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../store/features/authSlice";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { login, logout as logoutAction } from "../store/features/authSlice";
 import { Navigate } from "react-router-dom";
+import { HamburgerMenu } from "./HamburgerMenu";
 
 export default function Header() {
   const { isLogged, korisnik } = useSelector((state) => state.auth);
@@ -22,9 +23,13 @@ export default function Header() {
     localStorage.removeItem("korisnik");
     navigate("/");
   };
+
   return (
     <header className="header">
-      <div className="container">
+      <div className="hamburger-menu-mobile">
+        <HamburgerMenu />
+      </div>
+      <div className="container ">
         <div className="top-bar">
           <div className="left-side">
             <Link to="/">
