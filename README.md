@@ -1,4 +1,4 @@
-# ZavrsniProjekat
+# Limolux - web aplikacija za iznajmljivanje vozila
 <b>Tema:</b></br>
 Full stack web aplikacija za iznajmljivanje luksuznih automobila.</br>
 <b>Opis:</b></br>
