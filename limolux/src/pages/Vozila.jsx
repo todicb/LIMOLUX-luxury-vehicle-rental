@@ -56,6 +56,7 @@ export default function Vozila() {
     setSearch("");
     setFuel({ benzin: false, dizel: false });
     setType({ limuzina: false, sportski: false, suv: false });
+    setMobileFilter(!mobileFilter);
   };
 
   const filteredData = data.filter((elem) => {
