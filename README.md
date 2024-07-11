@@ -1,12 +1,3 @@
-# Limolux - web aplikacija
-<b>Tema:</b></br>
-Full stack web aplikacija za iznajmljivanje luksuznih automobila.</br>
-<b>Opis:</b></br>
-Ova aplikacija vam omogućava da iznajmite luksuzni automobil, kao i neke dodatne usluge.</br>
-<b>Tehnologije:</b></br>
-React, Vite, SCSS</br>
-Serverska strana: Node/Express.js, MongoDB</br>
-<b>Korišćene biblioteke:</b></br>
-Axios, Redux Toolkit, React-flags-select, Font Awesome, React Date Picker, React-loader-spinner</br>
-
+# Limolux
+This is a complete vehicle rental web application. Users can sign up, log in, and reserve vehicles on their own through the website. The application has a user-friendly interface, secure authentication, and a smooth booking process designed to make sure that all individual users experience it with ease and efficiency.
 
