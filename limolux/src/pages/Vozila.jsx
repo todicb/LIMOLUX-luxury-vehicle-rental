@@ -1,9 +1,9 @@
-import axios from "axios";
 import { useState, useEffect } from "react";
 import Card from "../components/Card";
 import { Oval } from "react-loader-spinner";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import VOZILA from "../vozila";
 
 export default function Vozila() {
   const [data, setData] = useState([]);
@@ -18,18 +18,9 @@ export default function Vozila() {
   const [mobileFilter, setMobileFilter] = useState(false);
 
   useEffect(() => {
-    axios
-      .get("https://mocki.io/v1/239bfaa0-8df6-4e6d-9b6e-7112d138b59c")
-      .then((response) => {
-        setLoader(true);
-        setData(response.data.vozila);
-        setLoader(false);
-      })
-      .catch((error) => {
-        console.log(error);
-        setLoader(false);
-      });
-  }, []);
+    setData(VOZILA);
+    setLoader(false);
+  });
 
   const handleSearchChange = (e) => {
     // console.log(e.target.value);

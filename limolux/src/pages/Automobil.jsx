@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import { Notifikacija } from "../components/Notifikacija";
 import { Oval } from "react-loader-spinner";
 import { Poruka } from "../components/Poruka";
+import VOZILA from "../vozila";
 
 export default function Automobil() {
   const { isLogged, korisnik } = useSelector((state) => state.auth);
@@ -55,19 +56,12 @@ export default function Automobil() {
       }
     }
   };
-
   useEffect(() => {
-    axios
-      .get("https://mocki.io/v1/239bfaa0-8df6-4e6d-9b6e-7112d138b59c")
-      .then((response) => {
-        const voziloData = response.data.vozila.find(
-          (elem) => elem.id === parseInt(voziloid)
-        );
-        setVozilo(voziloData);
-        setLoader(false);
-      })
-      .catch((error) => console.log(error));
+    const voziloData = VOZILA.find((elem) => elem.id === parseInt(voziloid));
+    setVozilo(voziloData);
+    setLoader(false);
   }, [voziloid]);
+  
 
   useEffect(() => {
     if (datumPreuzimanja && datumVracanja) {
