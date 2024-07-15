@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import ContactImage from "../assets/images/logo.png";
 
 export default function Footer() {
   return (
@@ -12,7 +13,7 @@ export default function Footer() {
       <div className="container">
         <div className="row">
           <Link to="/">
-            <img src="../src/assets/images/logo.png" alt="logo2.png" />
+            <img src={ContactImage} alt="logo2.png" />
           </Link>
         </div>
         <div className="row">

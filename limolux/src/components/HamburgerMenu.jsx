@@ -5,6 +5,7 @@ import { faBars} from "@fortawesome/free-solid-svg-icons";
 import { NavLink, Link, useNavigate, useLocation} from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { login, logout as logoutAction } from "../store/features/authSlice";
+import LogoImage from "../assets/images/logo.png";
 
 
 export const HamburgerMenu = () => {
@@ -40,7 +41,7 @@ export const HamburgerMenu = () => {
       <div className="hamburger-containter">
         <FontAwesomeIcon icon={faBars} className="hamburger-fontawesome" onClick={prikaziMenu} />
         <div className="hamburger-image">
-          <img src="../src/assets/images/logo.png" alt="logo.png" />
+          <img src={LogoImage} alt="logo.png" />
           </div>
       </div>
       {hamburgerMenu && (

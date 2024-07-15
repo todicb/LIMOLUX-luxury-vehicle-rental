@@ -1,7 +1,7 @@
 const VOZILA = [
   {
     id: 1,
-    src: "../src/assets/images/vozila/1.jpg",
+    src: "/vozila/1.jpg",
     marka: "Mercedes-Benz",
     model: "S-Class",
     godiste: 2024,
@@ -12,7 +12,7 @@ const VOZILA = [
   },
   {
     id: 2,
-    src: "../src/assets/images/vozila/2.jpg",
+    src: "/vozila/2.jpg",
     marka: "BMW",
     model: "Serija 7",
     godiste: 2023,
@@ -23,7 +23,7 @@ const VOZILA = [
   },
   {
     id: 3,
-    src: "../src/assets/images/vozila/3.jpg",
+    src: "/vozila/3.jpg",
     marka: "Bentley",
     model: "Continental GT",
     godiste: 2023,
@@ -34,7 +34,7 @@ const VOZILA = [
   },
   {
     id: 4,
-    src: "../src/assets/images/vozila/4.jpg",
+    src: "/vozila/4.jpg",
     marka: "Mercedes",
     model: "G-Class",
     godiste: 2023,
@@ -46,7 +46,7 @@ const VOZILA = [
 
   {
     id: 5,
-    src: "../src/assets/images/vozila/5.jpg",
+    src: "/vozila/5.jpg",
     marka: "Porsche",
     model: "911 Carrera",
     godiste: 2023,
@@ -58,7 +58,7 @@ const VOZILA = [
 
   {
     id: 6,
-    src: "../src/assets/images/vozila/6.jpg",
+    src: "/vozila/6.jpg",
     marka: "Audi",
     model: "R8",
     godiste: 2023,
@@ -70,7 +70,7 @@ const VOZILA = [
 
   {
     id: 7,
-    src: "../src/assets/images/vozila/7.jpg",
+    src: "/vozila/7.jpg",
     marka: "Audi",
     model: "A8",
     godiste: 2023,
@@ -81,7 +81,7 @@ const VOZILA = [
   },
   {
     id: 8,
-    src: "../src/assets/images/vozila/8.jpg",
+    src: "/vozila/8.jpg",
     marka: "Porsche",
     model: "Panamera",
     godiste: 2023,
@@ -92,7 +92,7 @@ const VOZILA = [
   },
   {
     id: 9,
-    src: "../src/assets/images/vozila/9.jpg",
+    src: "/vozila/9.jpg",
     marka: "Lexus",
     model: "LS",
     godiste: 2022,
@@ -103,7 +103,7 @@ const VOZILA = [
   },
   {
     id: 10,
-    src: "../src/assets/images/vozila/10.jpg",
+    src: "/vozila/10.jpg",
     marka: "Lamborghini",
     model: "Urus",
     godiste: 2023,
@@ -114,7 +114,7 @@ const VOZILA = [
   },
   {
     id: 11,
-    src: "../src/assets/images/vozila/11.jpg",
+    src: "/vozila/11.jpg",
     marka: "Mercedes-Benz ",
     model: "Maybach S-Class",
     godiste: 2023,
@@ -125,7 +125,7 @@ const VOZILA = [
   },
   {
     id: 12,
-    src: "../src/assets/images/vozila/12.jpg",
+    src: "/vozila/12.jpg",
     marka: "BMW",
     model: "X7",
     godiste: 2023,

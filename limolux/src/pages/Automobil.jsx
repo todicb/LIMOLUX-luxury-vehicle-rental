@@ -8,6 +8,7 @@ import { Notifikacija } from "../components/Notifikacija";
 import { Oval } from "react-loader-spinner";
 import { Poruka } from "../components/Poruka";
 import VOZILA from "../vozila";
+import LogoImage from "../assets/images/logo.png";
 
 export default function Automobil() {
   const { isLogged, korisnik } = useSelector((state) => state.auth);
@@ -97,7 +98,7 @@ export default function Automobil() {
             <img src={vozilo.src} alt="#" />
           </div>
           <div className="automobil-content">
-            <img src="../src/assets/images/logo.png" alt="" />
+            <img src={LogoImage} alt="" />
             <p>Marka: {vozilo.marka}</p>
             <p>Model: {vozilo.model}</p>
 

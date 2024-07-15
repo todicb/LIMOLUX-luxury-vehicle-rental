@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { login, logout as logoutAction } from "../store/features/authSlice";
 import { Navigate } from "react-router-dom";
 import { HamburgerMenu } from "./HamburgerMenu";
+import LogoImage from "../assets/images/logo.png";
 
 export default function Header() {
   const { isLogged, korisnik } = useSelector((state) => state.auth);
@@ -33,7 +34,7 @@ export default function Header() {
         <div className="top-bar">
           <div className="left-side">
             <Link to="/">
-              <img src="../src/assets/images/logo.png" alt="logo.png" />
+              <img src={LogoImage} alt="logo.png" />
             </Link>
           </div>
           <div className="right-side">
